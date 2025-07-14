@@ -13,7 +13,7 @@ const projects = [
       "Prototype, Testing & Iteration: Interactive prototype built in Figma, tested with users and refined based on feedback.",
       "Responsive Design: Designed a marketing webpage for the app, optimized for mobile, tablet, and desktop.",
     ],
-    video: "/videos/prototype_berghs.mp4",
+    video: "/videos/berghs_prototype.mp4",
   },
   {
     title: "Saveabl Newsletter Funnel",
@@ -53,7 +53,7 @@ const projects = [
 
 const ProjectsSection: React.FC = () => {
   return (
-    <section id="projects" className="bg-[#9d8080] text-[#ebddd7] px-0 sm:px-6 py-20">
+    <section id="projects" className="bg-[#917474] sm:bg-[#9d8080] text-[#ebddd7] px-0 sm:px-6 py-20">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className={`${dmSerif.className} text-3xl sm:text-5xl mb-6 sm:mb-12`}>
           A few selected projects

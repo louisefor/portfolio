@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
           className="w-full h-[40px] block"
         >
           <path
-            fill="#9d8080"
+            fill="#917474"
             d="M0,20 C60,40 120,0 180,20 C240,40 300,20 360,20 L360,0 L0,0 Z"
           />
         </svg>
