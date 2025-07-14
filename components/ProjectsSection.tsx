@@ -13,7 +13,7 @@ const projects = [
       "Prototype, Testing & Iteration: Interactive prototype built in Figma, tested with users and refined based on feedback.",
       "Responsive Design: Designed a marketing webpage for the app, optimized for mobile, tablet, and desktop.",
     ],
-    video: "/videos/berghs_prototype.mp4",
+    video: "/videos/prototype_berghs.mp4",
   },
   {
     title: "Saveabl Newsletter Funnel",
@@ -47,7 +47,7 @@ const projects = [
       "Execution: Published the carousel in the organic feed, then boosted it through Meta Ads for broader reach.",
       "Performance: Maintained a 3.3% CTR and 2.16 SEK CPC throughout the campaign.",
     ],
-    images: ["/images/saveabl_meta_carousel_1.png", "/images/saveabl_meta_carousel_2.png"],
+    images: ["/images/saveabl_meta_1.png", "/images/saveabl_meta_2.png"],
   },
 ];
 
