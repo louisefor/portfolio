@@ -23,7 +23,7 @@ export default function AboutPage() {
   return (
     <div className="relative">
       <main>
-        <section className="relative h-[50vh] sm:h-[120vh] flex justify-center px-6 sm:items-center items-center pt-7 sm:pt-16 overflow-hidden">
+        <section className="relative h-[55vh] sm:h-[120vh] flex justify-center px-6 sm:items-center items-center pt-7 sm:pt-16 overflow-hidden">
           {/* Optimerad bild istället för backgroundImage */}
           <div className="absolute inset-0 -z-10">
             <Image
