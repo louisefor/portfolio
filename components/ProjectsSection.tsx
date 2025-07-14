@@ -13,7 +13,7 @@ const projects = [
       "Prototype, Testing & Iteration: Interactive prototype built in Figma, tested with users and refined based on feedback.",
       "Responsive Design: Designed a marketing webpage for the app, optimized for mobile, tablet, and desktop.",
     ],
-    video: "/videos/berghs_prototype.mov",
+    video: "/videos/prototype_berghs.mp4",
   },
   {
     title: "Saveabl Newsletter Funnel",
