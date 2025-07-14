@@ -100,7 +100,7 @@ const ProjectsSection: React.FC = () => {
                       <video
                         className={`object-contain ${
                           project.title === "Saveabl Newsletter Funnel"
-                            ? "aspect-video max-w-[380px] sm:max-w-[580px]"
+                            ? "aspect-video max-w-[420px] sm:max-w-[580px]"
                             : "aspect-[9/16] max-w-[240px] sm:max-w-[280px]"
                         } w-full sm:w-auto`}
                         autoPlay
