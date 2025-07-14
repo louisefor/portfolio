@@ -15,7 +15,7 @@ const AboutIntroSection: React.FC = () => {
         <p className={`${poppins.className} text-base sm:text-lg mb-6 sm:mb-0`}>
 
             I created this page to give you a better sense of who I am. Partly to help
-            you decide whether I’d be a great complement for your team, and partly to
+            you decide whether I would be a great complement for your team, and partly to
             showcase my skills in design, tech and marketing.
             <br /><br />
             Besides traveling, I love learning new things and constantly developing,

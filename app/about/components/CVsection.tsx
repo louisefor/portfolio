@@ -213,7 +213,7 @@ const CvSection: React.FC = () => {
                 Sveriges Ekonomföreningars Riksorganisation (S.E.R.O.), remote <span className="mx-1">|</span> January 2021 – December 2021
               </p>
               <p className="mb-2">
-              Led marketing and communication nationally for S.E.R.O., the umbrella organisation for Sweden’s business student associations.
+              Led marketing and communication nationally for S.E.R.O., the umbrella organisation for Sweden&rsquo;s business student associations.
               </p>
               <ul className="list-disc pl-4 ml-2 space-y-2">
                 <li>Created marketing strategies and wrote copy for newsletters and campaigns</li>
