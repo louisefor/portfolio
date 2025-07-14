@@ -5,8 +5,8 @@ import { dmSerif, poppins } from "./fonts";
 
 
 export const metadata = {
-  title: "Your Portfolio",
-  description: "Showcasing my work",
+  title: "Portfolio – Louise Forsby",
+  description: "Strategic marketer with hands-on UX/UI experience",
 };
 
 export default function RootLayout({
