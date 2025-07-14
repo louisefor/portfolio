@@ -59,11 +59,12 @@ const NavbarTransparent: React.FC = () => {
         </div>
 
         {/* Mailikon */}
-        <div className="w-16 flex justify-end">
-          <Link href="mailto:louiseforsby_@hotmail.com" className="hover:opacity-70">
-            <Mail className="w-8 h-8 text-[#ebddd7]" />
-          </Link>
-        </div>
+         {/* Höger – ikon */}
+<div className="w-16 flex justify-end">
+  <a href="mailto:louiseforsby_@hotmail.com" className="hover:opacity-70">
+    <Mail className="w-8 h-8 text-[#624b4b]" />
+  </a>
+</div>
       </nav>
     </div>
   );

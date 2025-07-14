@@ -63,10 +63,11 @@ const Footer: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
           <h2 className="text-xl mb-1 font-semibold">Contact me:</h2>
 
-          <Link href="mailto:louiseforsby_@hotmail.com" className="flex items-center gap-2 hover:underline">
-            <Mail className="w-5 h-5" />
-            <span>louiseforsby_@hotmail.com</span>
-          </Link>
+          <a href="mailto:louiseforsby_@hotmail.com" className="flex items-center gap-2 hover:underline">
+  <Mail className="w-5 h-5" />
+  <span>louiseforsby_@hotmail.com</span>
+</a>
+
 
           <Link href="tel:0723756146" className="flex items-center gap-2 hover:underline">
             <Phone className="w-5 h-5" />

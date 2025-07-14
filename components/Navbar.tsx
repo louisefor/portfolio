@@ -68,12 +68,13 @@ const Navbar: React.FC = () => {
           </Link>
         </div>
 
-        {/* Höger – ikon */}
-        <div className="w-16 flex justify-end">
-          <Link href="mailto:louiseforsby_@hotmail.com" className="hover:opacity-70">
-            <Mail className="w-8 h-8 text-[#624b4b]" />
-          </Link>
-        </div>
+       {/* Höger – ikon */}
+<div className="w-16 flex justify-end">
+  <a href="mailto:louiseforsby_@hotmail.com" className="hover:opacity-70">
+    <Mail className="w-8 h-8 text-[#624b4b]" />
+  </a>
+</div>
+
       </nav>
     </div>
   );
