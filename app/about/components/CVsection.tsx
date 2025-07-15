@@ -159,6 +159,7 @@ const CvSection: React.FC = () => {
     <li><strong>Marketing Tools & Analytics:</strong> GA4, Meta Ads Manager, SEMrush, Google Search Console, Keyword Planner, Asana</li>
     <li><strong>CMS:</strong> Hygraph (Headless CMS), Webflow</li>
     <li><strong>Design & Creative:</strong> Canva, Figma, Photoshop, Premiere Pro, Illustrator, CapCut</li>
+    <li><strong>AI Tools:</strong> ChatGPT, DALL·E, Adobe Firefly, Leonardo AI</li>
     <li><strong>Email Marketing:</strong> Mailchimp, Rule</li>
     <li><strong>Customer Relations:</strong> Zendesk, Pipedrive</li>
     <li><strong>Programming & Development:</strong> React, JavaScript, HTML, CSS, PHP, Firebase, Vercel, VS Code</li>
