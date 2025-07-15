@@ -62,7 +62,7 @@ const NavbarTransparent: React.FC = () => {
          {/* Höger – ikon */}
 <div className="w-16 flex justify-end">
   <a href="mailto:louiseforsby_@hotmail.com" className="hover:opacity-70">
-    <Mail className="w-8 h-8 text-[#624b4b]" />
+    <Mail className="w-8 h-8 text-[#ebddd7]" />
   </a>
 </div>
       </nav>
