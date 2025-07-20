@@ -5,7 +5,7 @@ import { dmSerif, poppins } from "@/app/fonts";
 
 const CvSection: React.FC = () => {
   return (
-    <section id="cv" className="bg-[#9d8080] text-[#624b4b] px-0 sm:px-6 pt-12 pb-20">
+    <section id="cv" className="bg-[#917474] sm:bg-[#9d8080] text-[#624b4b] px-0 sm:px-6 pt-12 pb-20">
       <div className="sm:max-w-7xl mx-auto px-6 text-left">
         <h2 className={`${dmSerif.className} text-3xl sm:text-5xl mb-10`}>
           CV
