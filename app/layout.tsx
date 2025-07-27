@@ -18,7 +18,7 @@ export default function RootLayout({
         {/* Open Graph */}
         <meta property="og:title" content="Portfolio – Louise Forsby" />
         <meta property="og:description" content="Strategic marketer with hands-on UX/UI experience" />
-        <meta property="og:image" content="/social-share-preview.png" />
+        <meta property="og:image" content="https://louiseforsby.vercel.app/social-share-preview.png" />
         <meta property="og:image:width" content="1024" />
         <meta property="og:image:height" content="1024" />
         <meta property="og:type" content="website" />
@@ -28,7 +28,8 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Portfolio – Louise Forsby" />
         <meta name="twitter:description" content="Strategic marketer with hands-on UX/UI experience" />
-        <meta name="twitter:image" content="/social-share-preview.png" />
+        <meta name="twitter:image" content="https://louiseforsby.vercel.app/social-share-preview.png" />
+
       </head>
       <body className="bg-background text-body font-sans">
         <Navbar />
