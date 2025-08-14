@@ -50,9 +50,9 @@ const CvSection: React.FC = () => {
                 Support Exelement’s internal marketing efforts to strengthen brand visibility and digital communication. Exelement is a Swedish consultancy specialising in CRM, MarTech and integrations for B2B clients.
               </p>
               <ul className="list-disc pl-4 ml-2 space-y-2">
-                <li>Write website content, blog posts and campaigns in English and Swedish</li>
+                <li>Produce and optimize website, blog, campaign, and gated content in Swedish and English based on internal interviews and research</li>
                 <li>Translate and adapt technical copy to fit the Swedish market and audience</li>
-                <li>Improve UX and content structure to support conversions</li>
+                <li>Improve UX/UI and content structure, and brief internal teams for implementation</li>
                 <li>Collaborate with internal team and external consultants to produce content</li>
               </ul>
             </div>
