@@ -7,7 +7,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${poppins.variable} ${dmSerif.variable}`}>
       <head>
-        <title>Portfolio – Louise Forsby</title>
+        <title>Louise Forsby - Portfolio</title>
         <meta name="description" content="Strategic marketer with hands-on UX/UI experience" />
         <link rel="icon" href="/favicon.ico" />
         {/* Open Graph */}
