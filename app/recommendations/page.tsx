@@ -6,7 +6,7 @@ import { dmSerif, poppins } from "@/app/fonts";
 
 const Hero: React.FC = () => (
   // Ytterpadding matchar undersektionen
-  <section className="relative w-full bg-[#ebddd7] px-0 sm:px-6 pt-20 pb-16 sm:pt-36 sm:pb-32 min-h-[50vh] sm:min-h-[60vh] flex items-center">
+  <section className="relative w-full bg-[#ebddd7] px-0 sm:px-6 pt-28 pb-16 sm:pt-36 sm:pb-32 min-h-[50vh] sm:min-h-[60vh] flex items-center">
     {/* Centrerad container + samma max-bredd + innerpadding */}
     <div className="sm:max-w-5xl mx-auto w-full z-10 grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-4 sm:gap-6 items-center justify-items-start px-6">
       {/* Bild */}
