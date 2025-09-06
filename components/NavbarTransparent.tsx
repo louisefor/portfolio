@@ -26,6 +26,7 @@ const NavbarTransparent: React.FC = () => {
           <Link href="/#projects" className="hover:underline">Projects</Link>
           <button onClick={() => scrollTo("about")} className="hover:underline">About me</button>
           <button onClick={() => scrollTo("cv")} className="hover:underline">CV</button>
+          <Link href="/recommendations" className="hover:underline">Recommendations</Link>
         </div>
 
         {/* Mobilmeny-ikon */}
@@ -45,6 +46,7 @@ const NavbarTransparent: React.FC = () => {
             <Link href="/#projects" onClick={() => setIsMenuOpen(false)}>Projects</Link>
             <button onClick={() => { scrollTo("about"); setIsMenuOpen(false); }} className="hover:underline">About me</button>
             <button onClick={() => { scrollTo("cv"); setIsMenuOpen(false); }} className="hover:underline">CV</button>
+            <Link href="/recommendations" onClick={() => setIsMenuOpen(false)}>Recommendations</Link>
           </div>
         )}
 
@@ -59,12 +61,11 @@ const NavbarTransparent: React.FC = () => {
         </div>
 
         {/* Mailikon */}
-         {/* Höger – ikon */}
-<div className="w-16 flex justify-end">
-  <a href="mailto:louiseforsby_@hotmail.com" className="hover:opacity-70">
-    <Mail className="w-8 h-8 text-[#ebddd7]" />
-  </a>
-</div>
+        <div className="w-16 flex justify-end">
+          <a href="mailto:louiseforsby_@hotmail.com" className="hover:opacity-70">
+            <Mail className="w-8 h-8 text-[#ebddd7]" />
+          </a>
+        </div>
       </nav>
     </div>
   );

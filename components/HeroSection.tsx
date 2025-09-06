@@ -15,7 +15,7 @@ const HeroSection: React.FC = () => {
           Strategic marketer with hands-on UX/UI experience
         </h1>
         <p
-          className={`${poppins.className} text-lg sm:text-xl mt-6`}
+          className={`${poppins.className} text-lg sm:text-xl mt-4`}
           style={{ color: "#624b4b" }}
         >
           I connect the dots between business goals, user experience and digital execution.
