@@ -3,12 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { dmSerif, poppins } from "@/app/fonts";
 
-/* Arrows */
-const ArrowRight = ({ small = false, className = "" }: { small?: boolean; className?: string }) => (
+/* ---------------------------
+   Arrow (desktop)
+---------------------------- */
+const ArrowRight = () => (
   <svg
     aria-hidden="true"
     viewBox="0 0 24 24"
-    className={`${small ? "w-4 h-4" : "w-6 h-6 sm:w-7 sm:h-7"} ${className}`}
+    className="w-6 h-6 sm:w-7 sm:h-7 opacity-80 text-[#ebddd7]"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -17,95 +19,71 @@ const ArrowRight = ({ small = false, className = "" }: { small?: boolean; classN
   </svg>
 );
 
-const ArrowDown = ({ small = false, className = "" }: { small?: boolean; className?: string }) => (
-  <svg
-    aria-hidden="true"
-    viewBox="0 0 24 24"
-    className={`${small ? "w-4 h-4" : "w-6 h-6 sm:w-7 sm:h-7"} ${className}`}
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <path d="M12 5v14M5 13l7 7 7-7" />
-  </svg>
-);
-
-/* FlowGrid — desktop oförändrat, mobil = 3-kolumn: img | → | img */
+/* ---------------------------
+   FlowGrid
+   - Desktop: pilar mellan bilder, lika avstånd (gap-6 mellan allt, space-y-6 mellan rader)
+   - Mobil: 2 kolumner, inga pilar, samma gap hor & vert (gap-3)
+---------------------------- */
 function FlowGrid({ images, altBase }: { images: string[]; altBase: string }) {
-  const pairs = [
-    [images[0], images[1]].filter(Boolean),
-    [images[2], images[3]].filter(Boolean),
-  ].filter((pair) => pair.length);
+  const rows: string[][] = [];
+  for (let i = 0; i < images.length; i += 2) {
+    rows.push(images.slice(i, i + 2));
+  }
 
   return (
-    <div className="w-full flex flex-col items-center gap-8 sm:gap-10 max-w-[480px] mx-auto">
-      {pairs.map((pair, rowIdx) => (
-        <div key={rowIdx} className="w-full">
-          {/* DESKTOP */}
-          <div className="hidden sm:flex items-center justify-center gap-6">
+    <div className="w-full flex flex-col items-center">
+      {/* DESKTOP: två rader med konsekvent spacing */}
+      <div className="hidden sm:flex flex-col items-center space-y-6">
+        {rows.map((row, idx) => (
+          <div key={idx} className="flex items-center justify-center gap-6">
             <Image
-              src={pair[0]}
-              alt={`${altBase} – slide ${rowIdx * 2 + 1}`}
+              src={row[0]}
+              alt={`${altBase} – slide ${idx * 2 + 1}`}
               width={260}
               height={260}
               className="rounded-md object-contain shadow-md"
             />
-            {pair[1] && <ArrowRight className="text-[#ebddd7]" />}
-            {pair[1] && (
+            {row[1] && <ArrowRight />}
+            {row[1] && (
               <Image
-                src={pair[1]}
-                alt={`${altBase} – slide ${rowIdx * 2 + 2}`}
+                src={row[1]}
+                alt={`${altBase} – slide ${idx * 2 + 2}`}
                 width={260}
                 height={260}
                 className="rounded-md object-contain shadow-md"
               />
             )}
           </div>
+        ))}
+      </div>
 
-          {/* MOBIL: img | → | img  */}
-          <div className="sm:hidden grid grid-cols-[1fr_auto_1fr] gap-3 items-center justify-items-center">
-            <Image
-              src={pair[0]}
-              alt={`${altBase} – mobile slide ${rowIdx * 2 + 1}`}
-              width={150}
-              height={150}
-              className="rounded-md object-contain shadow-md"
-            />
-
-            {pair.length === 2 ? (
-              <ArrowRight small className="text-[#ebddd7]" />
-            ) : (
-              <span />
-            )}
-
-            {pair[1] ? (
-              <Image
-                src={pair[1]}
-                alt={`${altBase} – mobile slide ${rowIdx * 2 + 2}`}
-                width={150}
-                height={150}
-                className="rounded-md object-contain shadow-md"
-              />
-            ) : (
-              <span />
-            )}
-          </div>
-
-          {/* Pil ned mellan rader på mobil */}
-          {rowIdx + 1 < pairs.length && (
-            <ArrowDown small className="sm:hidden mx-auto mt-2 text-[#ebddd7]" />
-          )}
-        </div>
-      ))}
+      {/* MOBIL: 2 kolumner, lika gap i båda riktningar */}
+      <div className="sm:hidden grid grid-cols-2 gap-3 justify-items-center items-center">
+        {images.map((img, i) => (
+          <Image
+            key={i}
+            src={img}
+            alt={`${altBase} – mobile slide ${i + 1}`}
+            width={150}
+            height={150}
+            className="rounded-md object-contain shadow-md"
+          />
+        ))}
+        {/* Om udda antal bilder, fyll ut sista platsen för att behålla gridens form */}
+        {images.length % 2 === 1 && <span className="block" />}
+      </div>
     </div>
   );
 }
 
-/* Projects data */
+/* ---------------------------
+   Projects data
+---------------------------- */
 const projects = [
   {
     title: "Berghs UX/UI Prototype",
-    intro: "Part of the UI/UX course at Berghs School of Communication (Spring 2025).",
+    intro:
+      "Part of the UI/UX course at Berghs School of Communication (Spring 2025).",
     bullets: [
       "Ideation & Wireframes: Concept development, user journeys and content structure.",
       "Visual & Digital Design: Visual identity, iconography and overall look & feel.",
@@ -116,7 +94,8 @@ const projects = [
   },
   {
     title: "Saveabl Newsletter Funnel",
-    intro: "Designed and implemented popup and email automation to convert visitors into subscribers and active customers.",
+    intro:
+      "Designed and implemented popup and email automation to convert visitors into subscribers and active customers.",
     bullets: [
       "Popup Concept & Design: Created the idea and responsive design for a giveaway popup where visitors can win a meal kit by signing up.",
       "Multilingual Segmentation: Built in Swedish, English, and Danish. Triggered for first-time visitors. Users select their country to enable accurate audience targeting.",
@@ -127,7 +106,8 @@ const projects = [
   },
   {
     title: "Saveabl Referral System",
-    intro: "Designed to drive growth through personal referrals and seamless user experience.",
+    intro:
+      "Designed to drive growth through personal referrals and seamless user experience.",
     bullets: [
       'Digital Referral Flow: Designed and developed a referral system integrated with Firebase, where users can access and share their personal code via “My Pages”.',
       "Multilingual Setup: Built to work seamlessly in Swedish, English, and Danish.",
@@ -135,11 +115,15 @@ const projects = [
       "Printed Vouchers: Created printed referral vouchers, included in customer deliveries.",
     ],
     video: "/videos/referral_saveabl.mp4",
-    images: ["/images/referral_voucher_front.png", "/images/referral_voucher_back.png"],
+    images: [
+      "/images/referral_voucher_front.png",
+      "/images/referral_voucher_back.png",
+    ],
   },
   {
     title: "Saveabl Meta Carousel Ad",
-    intro: "Sponsored Instagram carousel ad that became part of Saveabl’s long-term paid and organic social strategy.",
+    intro:
+      "Sponsored Instagram carousel ad that became part of Saveabl’s long-term paid and organic social strategy.",
     bullets: [
       "Concept & Copy: Developed the concept and wrote clear, conversion-oriented messaging aligned with Saveabl’s tone of voice.",
       "Design: Created all carousel slides with consistent layout, visual hierarchy and brand coherence.",
@@ -166,12 +150,21 @@ const projects = [
   },
 ];
 
-/* Section */
+/* ---------------------------
+   Section component
+---------------------------- */
 const ProjectsSection: React.FC = () => {
   return (
-    <section id="projects" className="bg-[#917474] sm:bg-[#9d8080] text-[#ebddd7] px-0 sm:px-6 py-20">
+    <section
+      id="projects"
+      className="bg-[#917474] sm:bg-[#9d8080] text-[#ebddd7] px-0 sm:px-6 py-20"
+    >
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className={`${dmSerif.className} text-3xl sm:text-5xl mb-6 sm:mb-12`}>A few selected projects</h2>
+        <h2
+          className={`${dmSerif.className} text-3xl sm:text-5xl mb-6 sm:mb-12`}
+        >
+          A few selected projects
+        </h2>
 
         <div className="flex flex-col gap-10 sm:gap-20">
           {projects.map((project, index) => {
@@ -179,11 +172,21 @@ const ProjectsSection: React.FC = () => {
 
             return (
               <div key={index}>
-                <div className={`flex flex-col sm:flex-row ${isOdd ? "sm:flex-row-reverse" : ""} items-center gap-10`}>
+                <div
+                  className={`flex flex-col sm:flex-row ${
+                    isOdd ? "sm:flex-row-reverse" : ""
+                  } items-center gap-10`}
+                >
                   {/* TEXT */}
                   <div className="sm:w-1/2 w-full order-1 sm:order-none">
-                    <h3 className={`${dmSerif.className} text-2xl sm:text-3xl mb-4`}>{project.title}</h3>
-                    <div className={`${poppins.className} text-base sm:text-lg`}>
+                    <h3
+                      className={`${dmSerif.className} text-2xl sm:text-3xl mb-4`}
+                    >
+                      {project.title}
+                    </h3>
+                    <div
+                      className={`${poppins.className} text-base sm:text-lg`}
+                    >
                       {project.intro && <p className="mb-4">{project.intro}</p>}
                       {project.bullets && (
                         <ul className="list-disc pl-5 space-y-4">
@@ -222,11 +225,16 @@ const ProjectsSection: React.FC = () => {
 
                     {project.images &&
                       (project.title === "Exelement LinkedIn Carousel" ? (
-                        <FlowGrid images={project.images} altBase="Exelement SyncCloud carousel" />
+                        <FlowGrid
+                          images={project.images}
+                          altBase="Exelement SyncCloud carousel"
+                        />
                       ) : (
                         <div
                           className={`flex flex-row sm:flex-row justify-center items-center ${
-                            project.title === "Saveabl Meta Carousel Ad" ? "gap-0 sm:gap-0" : "gap-2 sm:gap-4"
+                            project.title === "Saveabl Meta Carousel Ad"
+                              ? "gap-0 sm:gap-0"
+                              : "gap-2 sm:gap-4"
                           }`}
                         >
                           {project.images.map((img, i) => (
@@ -234,10 +242,20 @@ const ProjectsSection: React.FC = () => {
                               key={i}
                               src={img}
                               alt={`Image ${i + 1}`}
-                              width={project.title === "Saveabl Meta Carousel Ad" ? 160 : 120}
-                              height={project.title === "Saveabl Meta Carousel Ad" ? 160 : 120}
+                              width={
+                                project.title === "Saveabl Meta Carousel Ad"
+                                  ? 160
+                                  : 120
+                              }
+                              height={
+                                project.title === "Saveabl Meta Carousel Ad"
+                                  ? 160
+                                  : 120
+                              }
                               className={`object-contain ${
-                                project.title === "Saveabl Meta Carousel Ad" ? "w-[240px] sm:w-[280px]" : "w-[120px] sm:w-[160px]"
+                                project.title === "Saveabl Meta Carousel Ad"
+                                  ? "w-[240px] sm:w-[280px]"
+                                  : "w-[120px] sm:w-[160px]"
                               } h-auto`}
                             />
                           ))}
