@@ -93,75 +93,109 @@ const RecommendationSection: React.FC = () => (
       </blockquote>
 
       <article className={`${poppins.className} text-base sm:text-lg leading-relaxed space-y-6 max-w-3xl`}>
-  <p>
-    We at Exelement would be delighted to recommend Louise, who has made a great addition to the internal marketing team at Exelement.
-  </p>
+        <p>
+          We at Exelement would be delighted to recommend Louise, who has made a great addition to the internal marketing team at Exelement.
+        </p>
 
-  <div>
-    <h3 className={`${dmSerif.className} text-xl sm:text-2xl mb-2`}>
-      Contributions and Responsibilities
-    </h3>
-    <p>
-      As part of our team, Louise made a big impact in starting and running our marketing operations. Her responsibilities included:
-    </p>
-    <ul className="list-disc pl-6 mt-3 space-y-2">
-      <li>
-        <strong>Content creation &amp; optimization:</strong> Produced and refined a variety of content, webpages, blog posts, campaign materials, and gated assets; these were written in an industry-standard way that usually requires a few years in the industry to understand.
-      </li>
-      <li>
-        <strong>Translation &amp; market adaptation:</strong> Expertly translated and localized technical copy, ensuring content was both accurate and locally adapted to make sense for the Swedish market.
-      </li>
-      <li>
-        <strong>UX/UI improvements &amp; structural guidance:</strong> Provided great feedback on content structure and user experience.
-      </li>
-    </ul>
-  </div>
+        <div>
+          <h3 className={`${dmSerif.className} text-xl sm:text-2xl mb-2`}>
+            Contributions and Responsibilities
+          </h3>
+          <p>
+            As part of our team, Louise made a big impact in starting and running our marketing operations. Her responsibilities included:
+          </p>
+          <ul className="list-disc pl-6 mt-3 space-y-2">
+            <li>
+              <strong>Content creation &amp; optimization:</strong> Produced and refined a variety of content, webpages, blog posts, campaign materials, and gated assets; these were written in an industry-standard way that usually requires a few years in the industry to understand.
+            </li>
+            <li>
+              <strong>Translation &amp; market adaptation:</strong> Expertly translated and localized technical copy, ensuring content was both accurate and locally adapted to make sense for the Swedish market.
+            </li>
+            <li>
+              <strong>UX/UI improvements &amp; structural guidance:</strong> Provided great feedback on content structure and user experience.
+            </li>
+          </ul>
+        </div>
 
-  <div>
-    <h3 className={`${dmSerif.className} text-xl sm:text-2xl mb-2`}>
-      Impact and Strengths
-    </h3>
-    <p>
-      With her contributions, Louise helped improve the content, user experience, and delivery of our digital marketing. Her contributions helped us to communicate complex CRM and MarTech ideas in a way that strengthens our brand presence and supports our sales processes.
-    </p>
-  </div>
+        <div>
+          <h3 className={`${dmSerif.className} text-xl sm:text-2xl mb-2`}>
+            Impact and Strengths
+          </h3>
+          <p>
+            With her contributions, Louise helped improve the content, user experience, and delivery of our digital marketing. Her contributions helped us to communicate complex CRM and MarTech ideas in a way that strengthens our brand presence and supports our sales processes.
+          </p>
+        </div>
 
-  <div>
-    <h3 className={`${dmSerif.className} text-xl sm:text-2xl mb-2`}>
-      Key strengths include:
-    </h3>
-    <ul className="list-disc pl-6 mt-3 space-y-2">
-      <li><strong>Strategic content thinking:</strong> Seamlessly integrated marketing goals, audience needs, and technical information into content that informs and engages.</li>
-      <li><strong>Bilingual precision:</strong> Maintained the nuance and tone of our messaging across two languages, demonstrating both linguistic talent and cultural understanding.</li>
-      <li><strong>Quality-driven UX sensibility:</strong> Recognized and addressed friction points in content layout and navigation, improving reader engagement and comprehension.</li>
-      <li><strong>Collaborative professionalism:</strong> Fostered constructive cooperation between internal and external teams, consistently delivering high-quality outcomes on time.</li>
-    </ul>
-  </div>
+        <div>
+          <h3 className={`${dmSerif.className} text-xl sm:text-2xl mb-2`}>
+            Key strengths include:
+          </h3>
+          <ul className="list-disc pl-6 mt-3 space-y-2">
+            <li><strong>Strategic content thinking:</strong> Seamlessly integrated marketing goals, audience needs, and technical information into content that informs and engages.</li>
+            <li><strong>Bilingual precision:</strong> Maintained the nuance and tone of our messaging across two languages, demonstrating both linguistic talent and cultural understanding.</li>
+            <li><strong>Quality-driven UX sensibility:</strong> Recognized and addressed friction points in content layout and navigation, improving reader engagement and comprehension.</li>
+            <li><strong>Collaborative professionalism:</strong> Fostered constructive cooperation between internal and external teams, consistently delivering high-quality outcomes on time.</li>
+          </ul>
+        </div>
 
-  <div>
-    <h3 className={`${dmSerif.className} text-xl sm:text-2xl mb-2`}>
-      Recommendation
-    </h3>
-    <p>
-      I wholeheartedly endorse Louise for any role involving content development, UX/content strategy, translation, or marketing communications. Her blend of strategic insight, technical adaptability, bilingual skills, and cooperative spirit make her an outstanding asset to any team.
-    </p>
-  </div>
+        <div>
+          <h3 className={`${dmSerif.className} text-xl sm:text-2xl mb-2`}>
+            Recommendation
+          </h3>
+          <p>
+            I wholeheartedly endorse Louise for any role involving content development, UX/content strategy, translation, or marketing communications. Her blend of strategic insight, technical adaptability, bilingual skills, and cooperative spirit make her an outstanding asset to any team.
+          </p>
+        </div>
 
-  <hr className="my-6 border-[#ebddd7]/30" />
-  <address className="not-italic mt-6">
-  <div className="font-semibold">Fritjof Andresen</div>
-  <div className="italic opacity-90">Senior Consultant, Exelement</div>
-  <div className="mt-2 text-sm">
-    <a className="underline hover:opacity-80" href="https://exelement.co" target="_blank" rel="noopener">
-      Exelement.co
-    </a>
-  </div>
-  <div className={`${poppins.className} text-sm opacity-90 mt-1`}>
-    Contact details available on request.
-  </div>
-</address>
-</article>
+        <hr className="my-6 border-[#ebddd7]/30" />
+        <address className="not-italic mt-6">
+          <div className="font-semibold">Fritjof Andresen</div>
+          <div className="italic opacity-90">Senior Consultant, Exelement</div>
+          <div className="mt-2 text-sm">
+            <a className="underline hover:opacity-80" href="https://exelement.co" target="_blank" rel="noopener">
+              Exelement.co
+            </a>
+          </div>
+          <div className={`${poppins.className} text-sm opacity-90 mt-1`}>
+            Contact details available on request.
+          </div>
+        </address>
+      </article>
 
+      {/* --- Avdelare mellan rekommendationer --- */}
+      <hr className="my-12 border-[#ebddd7]/30" />
+
+      {/* --- New Customers --- */}
+      <h2 className={`${dmSerif.className} text-3xl sm:text-5xl mb-4`}>
+        new customers
+      </h2>
+
+      <p className={`${poppins.className} text-lg sm:text-xl mb-8 max-w-3xl`}>
+        Recommendation from new customers, where I supported their content work during a limited period.
+      </p>
+
+      <article className={`${poppins.className} text-base sm:text-lg leading-relaxed space-y-6 max-w-3xl`}>
+        <p>
+          I truly appreciate how quickly you understood our needs and how you always delivered with care and quality. It is clear that you are passionate about what you do, and the result speaks for itself.
+        </p>
+        <p>
+          Thank you again for everything. I truly recommend your competence, experience, and knowledge.
+        </p>
+
+        <hr className="my-6 border-[#ebddd7]/30" />
+        <address className="not-italic mt-6">
+          <div className="font-semibold">Robert Nyberg</div>
+          <div className="italic opacity-90">Deputy CEO, New Customers</div>
+          <div className="mt-2 text-sm">
+            <a className="underline hover:opacity-80" href="https://newcustomers.se/" target="_blank" rel="noopener">
+              newcustomers.se
+            </a>
+          </div>
+          <div className={`${poppins.className} text-sm opacity-90 mt-1`}>
+            Contact details available on request.
+          </div>
+        </address>
+      </article>
     </div>
   </section>
 );

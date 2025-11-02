@@ -5,35 +5,44 @@ import { dmSerif, poppins } from "@/app/fonts";
 
 const CvSection: React.FC = () => {
   return (
-    <section id="cv" className="bg-[#917474] sm:bg-[#9d8080] text-[#624b4b] px-0 sm:px-6 pt-12 pb-20">
+    <section
+      id="cv"
+      className="bg-[#917474] sm:bg-[#9d8080] text-[#624b4b] px-0 sm:px-6 pt-12 pb-20"
+    >
       <div className="sm:max-w-7xl mx-auto px-6 text-left">
         <h2 className={`${dmSerif.className} text-3xl sm:text-5xl mb-10`}>
           CV
         </h2>
+
         <div className="grid sm:grid-cols-2 gap-10">
           {/* Work Experience */}
           <div className="relative bg-[#d7c3b9] text-[#624b4b] p-6 sm:p-8 rounded-2xl shadow-md max-h-[650px] overflow-y-auto">
-  {/* Pilar – placeras i övre högra hörnet */}
-  <div className="absolute top-6 right-6 flex flex-col items-center space-y-1 text-xl pointer-events-none select-none">
-    <span>↑</span>
-    <span>↓</span>
-  </div>
-            
+            {/* Pilar */}
+            <div className="absolute top-6 right-6 flex flex-col items-center space-y-1 text-xl pointer-events-none select-none">
+              <span>↑</span>
+              <span>↓</span>
+            </div>
+
             <h3 className="text-2xl font-semibold mb-4">Work Experience</h3>
 
-            <div className="mb-10">
-              <h3 className="text-lg sm:text-xl font-semibold">Marketing Manager</h3>
+            {/* Saveabl */}
+            <div className="mb-8">
+              <h3 className="text-lg sm:text-xl font-semibold">
+                Marketing Manager
+              </h3>
               <p className="italic mb-2">
                 Saveabl, Gothenburg <span className="mx-1">|</span> October 2022 – Present
               </p>
               <p className="mb-4">
-                Started as an intern via the Matix program and now run all marketing activities
-                in a scaling startup environment. I handle both strategy and execution to drive growth
-                across all digital touchpoints. Saveabl is a foodtech startup reducing food waste by delivering rescued, chef-prepared meal kits.
+                Started as an intern via the Matix program and now run all
+                marketing activities in a scaling startup environment. I handle
+                both strategy and execution to drive growth across all digital
+                touchpoints. Saveabl is a foodtech startup reducing food waste
+                by delivering rescued, chef-prepared meal kits.
               </p>
               <ul className="list-disc pl-4 ml-2 space-y-2">
                 <li>Plan and execute marketing strategies across paid media, organic channels and email</li>
-                <li>Design and manage landing pages, popups and forms (frontend & backend)</li>
+                <li>Design and manage landing pages, popups and forms (frontend &amp; backend)</li>
                 <li>Improve UX/UI and contribute to design systems and development</li>
                 <li>Support brand development and positioning</li>
                 <li>Combine tech and marketing to build scalable systems and better customer experiences</li>
@@ -41,46 +50,62 @@ const CvSection: React.FC = () => {
               </ul>
             </div>
 
-            <div className="mb-10">
-              <h3 className="text-lg sm:text-xl font-semibold">Marketing Consultant</h3>
+            {/* Marketing Consulting */}
+            <div className="mb-8">
+              <h3 className="text-lg sm:text-xl font-semibold">Marketing Consulting</h3>
               <p className="italic mb-2">
-                Exelement, remote <span className="mx-1">|</span> February 2025 – Present
+                Remote <span className="mx-1">|</span> 2024 – Present
               </p>
               <p className="mb-4">
-                Support Exelement’s internal marketing efforts to strengthen brand visibility and digital communication. Exelement is a Swedish consultancy specialising in CRM, MarTech and integrations for B2B clients.
+                Within my role at Saveabl, I provide marketing consulting for other companies:
               </p>
-              <ul className="list-disc pl-4 ml-2 space-y-2">
-                <li>Produce and optimize website, blog, campaign, and gated content in Swedish and English based on internal interviews and research</li>
-                <li>Translate and adapt technical copy to fit the Swedish market and audience</li>
-                <li>Improve UX/UI and content structure, and brief internal teams for implementation</li>
-                <li>Collaborate with internal team and external consultants to produce content</li>
-              </ul>
+
+              {/* PIMM */}
+              <div className="mb-4">
+                <p className="font-semibold">PIMM – Marketing &amp; Design Agency</p>
+                <p className="italic mb-1">September 2025 – Present</p>
+                <ul className="list-disc pl-4 ml-2 space-y-1">
+                  <li>Work with digital growth focusing on Google Ads and Meta Ads</li>
+                  <li>Implement tracking, conversion goals and campaign structures and conduct ongoing analysis for two of the agency’s clients and internal advertising</li>
+                  <li>Provide recommendations and reporting to support optimization and further growth</li>
+                </ul>
+              </div>
+
+              {/* Adderat */}
+              <div className="mb-4">
+                <p className="font-semibold">Adderat – Accounting Firm</p>
+                <p className="italic mb-1">December 2024 – Present</p>
+                <ul className="list-disc pl-4 ml-2 space-y-1">
+                  <li>Develop advertising strategies and campaign budgets for Google Ads, adapted to geographical target groups</li>
+                  <li>Present and brief campaign ideas to agency leader to ensure long-term positioning and goals</li>
+                  <li>Design and optimize landing pages and improve SEO to increase digital visibility</li>
+                  <li>Set up automated email flows in Mailchimp for lead generation and growth</li>
+                </ul>
+              </div>
+
+              {/* Exelement */}
+              <div>
+                <p className="font-semibold">Exelement – Strategic CRM &amp; MarTech Partner</p>
+                <p className="italic mb-1">February 2025 – September 2025</p>
+                <ul className="list-disc pl-4 ml-2 space-y-1">
+                  <li>Improved UX/UI and briefed internal teams for implementation</li>
+                  <li>Translated and adapted technical copy for the Swedish market</li>
+                  <li>Collaborated with internal teams and external consultants to produce and adapt content</li>
+                  <li>Strengthened brand visibility through content, copy and campaigns in Swedish and English</li>
+                </ul>
+              </div>
             </div>
 
-            <div className="mb-10">
-              <h3 className="text-lg sm:text-xl font-semibold">Marketing Consultant</h3>
-              <p className="italic mb-2">
-                Adderat, remote <span className="mx-1">|</span> December 2024 – Present
-              </p>
-              <p className="mb-4">
-                Support Adderat’s internal marketing with a focus on digital visibility and lead generation. Adderat is a Swedish accounting firm.
-              </p>
-              <ul className="list-disc pl-4 ml-2 space-y-2">
-                <li>Developed and manage a local Google Ads strategy tailored to specific regions</li>
-                <li>Build, design and optimise landing pages to align with Adderat’s brand and Google Ads strategy</li>
-                <li>Set up email automation for new leads via Mailchimp</li>
-                <li>Improve SEO on the main website to increase organic visibility</li>
-                <li>Work independently with focus on clarity, conversion and positioning</li>
-              </ul>
-            </div>
-
-            <div className="mb-10">
+            {/* Familjekortet */}
+            <div className="mb-8">
               <h3 className="text-lg sm:text-xl font-semibold">Marketing Assistant</h3>
               <p className="italic mb-2">
                 Familjekortet, Borås <span className="mx-1">|</span> June 2023 – June 2024 <span className="mx-1">|</span> 50%
               </p>
               <p className="mb-3">
-                Supported the marketing operations of Familjekortet, a digital platform offering local discounts and national deals for families across Sweden.
+                Supported the marketing operations of Familjekortet, a digital
+                platform offering local discounts and national deals for
+                families across Sweden.
               </p>
               <ul className="list-disc pl-4 ml-2 space-y-2">
                 <li>Handled email marketing and push notifications</li>
@@ -90,16 +115,18 @@ const CvSection: React.FC = () => {
               </ul>
             </div>
 
-            <div className="mb-10">
+            {/* BrightAct */}
+            <div className="mb-8">
               <h3 className="text-lg sm:text-xl font-semibold">Marketing Intern</h3>
               <p className="italic mb-2">
                 BrightAct, Barcelona <span className="mx-1">|</span> January 2022 – March 2022
               </p>
               <p className="mb-3">
-                Contributed to BrightAct’s digital marketing during an early startup phase focused on brand awareness. BrightAct is a social impact startup developing an app that centralises support services for individuals affected by domestic violence.
+                Contributed to BrightAct’s digital marketing during an early
+                startup phase focused on brand awareness.
               </p>
               <ul className="list-disc pl-4 ml-2 space-y-2">
-                <li>Created an early-stage marketing strategy tailored to the startup’s goals.</li>
+                <li>Created an early-stage marketing strategy tailored to the startup’s goals</li>
                 <li>Created content and supported social media engagement</li>
                 <li>Assisted in building brand visibility through storytelling and digital outreach</li>
                 <li>Supported small-scale campaigns to raise user awareness</li>
@@ -117,24 +144,25 @@ const CvSection: React.FC = () => {
                 Berghs School of Communication <span className="mx-1">|</span> April 2025 - May 2025
               </p>
               <p className="mb-3">
-  Course focused on UX principles, intuitive interface design and prototyping. View{" "}
-  <a
-    href="https://certificate.berghs.se/kursintyg-louise-forsby-267657-granssnittsdesign-ux-a00qt00000eqbzbiap/?ref=linkedin-profile&zone=truecrt&lang=se"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-semibold underline text-[#624b4b] hover:opacity-80"
-  >
-    course certificate
-  </a>
-  .
-</p>
-
+                Course focused on UX principles, intuitive interface design and prototyping. View{" "}
+                <a
+                  href="https://certificate.berghs.se/kursintyg-louise-forsby-267657-granssnittsdesign-ux-a00qt00000eqbzbiap/?ref=linkedin-profile&zone=truecrt&lang=se"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold underline text-[#624b4b] hover:opacity-80"
+                >
+                  course certificate
+                </a>
+                .
+              </p>
             </div>
 
             <div className="mb-10">
-              <h3 className="text-lg sm:text-xl font-semibold">Master of Science in Business and Economics (One Year)</h3>
+              <h3 className="text-lg sm:text-xl font-semibold">
+                Master of Science in Business and Economics (One Year)
+              </h3>
               <p className="italic mb-2">
-                Matix, School of Business, Economics and Law at the University of Gothenburg <span className="mx-1">|</span> August 2022 - June 2023 
+                Matix, School of Business, Economics and Law at the University of Gothenburg <span className="mx-1">|</span> August 2022 - June 2023
               </p>
               <p className="mb-3">
                 Innovation, strategy, change management, and leadership, with practical experience two days a week at partner companies.
@@ -142,9 +170,11 @@ const CvSection: React.FC = () => {
             </div>
 
             <div className="mb-10">
-              <h3 className="text-lg sm:text-xl font-semibold">Bachelor of Science in Business Administration and Economics</h3>
+              <h3 className="text-lg sm:text-xl font-semibold">
+                Bachelor of Science in Business Administration and Economics
+              </h3>
               <p className="italic mb-2">
-                University of Halmstad <span className="mx-1">|</span> August 2019 - June 2022  
+                University of Halmstad <span className="mx-1">|</span> August 2019 - June 2022
               </p>
               <p className="mb-3">
                 Awarded Economics Student of the Year and organized the economists' winter ball (2019).
@@ -152,39 +182,37 @@ const CvSection: React.FC = () => {
             </div>
           </div>
 
-         {/* Skills */}
-<div className="bg-[#d7c3b9] text-[#624b4b] p-6 sm:p-8 rounded-2xl shadow-md">
-  <h3 className="text-2xl font-semibold mb-4">Skills</h3>
-  <ul className="mb-6 list-none pl-0 space-y-3">
-    <li><strong>Marketing Tools & Analytics:</strong> GA4, Meta Ads Manager, SEMrush, Google Search Console, Keyword Planner, Asana</li>
-    <li><strong>CMS:</strong> Hygraph (Headless CMS), Webflow</li>
-    <li><strong>Design & Creative:</strong> Canva, Figma, Photoshop, Premiere Pro, Illustrator, CapCut</li>
-    <li><strong>AI Tools:</strong> ChatGPT, DALL·E, Adobe Firefly, Leonardo AI</li>
-    <li><strong>Email Marketing:</strong> Mailchimp, Rule</li>
-    <li><strong>Customer Relations:</strong> Zendesk, Pipedrive</li>
-    <li><strong>Programming & Development:</strong> React, JavaScript, HTML, CSS, PHP, Firebase, Vercel, VS Code</li>
-    <li><strong>Personal:</strong> Quick learner, growth-driven, curious, collaborative and solution-oriented</li>
-  </ul>
+          {/* Skills */}
+          <div className="bg-[#d7c3b9] text-[#624b4b] p-6 sm:p-8 rounded-2xl shadow-md">
+            <h3 className="text-2xl font-semibold mb-4">Skills</h3>
+            <ul className="mb-6 list-none pl-0 space-y-3">
+              <li><strong>Marketing Tools &amp; Analytics:</strong> GA4, Meta Ads Manager, SEMrush, Google Search Console, Keyword Planner, Asana</li>
+              <li><strong>CMS:</strong> Hygraph (Headless CMS), Webflow</li>
+              <li><strong>Design &amp; Creative:</strong> Canva, Figma, Photoshop, Premiere Pro, Illustrator, CapCut</li>
+              <li><strong>AI Tools:</strong> ChatGPT, DALL·E, Adobe Firefly, Leonardo AI</li>
+              <li><strong>Email Marketing:</strong> Mailchimp, Rule</li>
+              <li><strong>Customer Relations:</strong> Zendesk, Pipedrive</li>
+              <li><strong>Programming &amp; Development:</strong> React, JavaScript, HTML, CSS, PHP, Firebase, Vercel, VS Code</li>
+              <li><strong>Personal:</strong> Quick learner, growth-driven, curious, collaborative and solution-oriented</li>
+            </ul>
 
-
-  <h3 className="text-xl sm:text-xl font-semibold">Certificate</h3>
-  <h3 className="text-xl font-semibold mt-4 mb-4">Introduction to Coding</h3>
-              <p className="italic mb-2">
+            <h3 className="text-xl sm:text-xl font-semibold">Certificate</h3>
+            <h3 className="text-xl font-semibold mt-4 mb-4">Introduction to Coding</h3>
+            <p className="italic mb-2">
               SheCodes <span className="mx-1">|</span> 2022
-              </p>
-  <p className="mb-4">
-  Completed a coding course covering HTML, CSS, JavaScript, and the use of Visual Studio Code, earning a{" "}
-  <a
-    href="https://www.shecodes.io/certificates/0c6b814604ff2a52916b114088450934"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="font-semibold underline hover:opacity-80"
-  >
-    certificate
-  </a>{" "}
-  upon completion.
-</p>
-
+            </p>
+            <p className="mb-4">
+              Completed a coding course covering HTML, CSS, JavaScript, and the use of Visual Studio Code, earning a{" "}
+              <a
+                href="https://www.shecodes.io/certificates/0c6b814604ff2a52916b114088450934"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold underline hover:opacity-80"
+              >
+                certificate
+              </a>{" "}
+              upon completion.
+            </p>
 
             <h3 className="text-xl font-semibold mt-10 mb-4">Languages</h3>
             <ul className="list-disc list-inside mb-10">
@@ -209,12 +237,14 @@ const CvSection: React.FC = () => {
             </div>
 
             <div className="mb-10">
-              <h3 className="text-lg sm:text-xl font-semibold">Responsible for Marketing and Communication</h3>
+              <h3 className="text-lg sm:text-xl font-semibold">
+                Responsible for Marketing and Communication
+              </h3>
               <p className="italic mb-2">
                 Sveriges Ekonomföreningars Riksorganisation (S.E.R.O.), remote <span className="mx-1">|</span> January 2021 – December 2021
               </p>
               <p className="mb-2">
-              Led marketing and communication nationally for S.E.R.O., the umbrella organisation for Sweden’s business student associations.
+                Led marketing and communication nationally for S.E.R.O., the umbrella organisation for Sweden’s business student associations.
               </p>
               <ul className="list-disc pl-4 ml-2 space-y-2">
                 <li>Created marketing strategies and wrote copy for newsletters and campaigns</li>
@@ -225,12 +255,14 @@ const CvSection: React.FC = () => {
             </div>
 
             <div className="mb-10">
-              <h3 className="text-lg sm:text-xl font-semibold">Responsible for Marketing</h3>
+              <h3 className="text-lg sm:text-xl font-semibold">
+                Responsible for Marketing
+              </h3>
               <p className="italic mb-2">
                 Eurekha, Halmstad <span className="mx-1">|</span> January 2020 – December 2020
               </p>
               <p className="mb-2">
-              Managed marketing for Eurekha, the student business association at Halmstad University.
+                Managed marketing for Eurekha, the student business association at Halmstad University.
               </p>
               <ul className="list-disc pl-4 ml-2 space-y-2">
                 <li>Planned and promoted events for students</li>
