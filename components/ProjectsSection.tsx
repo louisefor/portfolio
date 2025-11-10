@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useState } from "react";
 import { dmSerif, poppins } from "@/app/fonts";
 
 /* ---------------------------
@@ -154,6 +155,20 @@ const projects = [
    Section component
 ---------------------------- */
 const ProjectsSection: React.FC = () => {
+  // Foto-bildspel
+  const photoImages = [
+    "/images/photo_saveabl_mushrooms.jpg",
+    "/images/photo_saveabl_basil1.jpg",
+    "/images/photo_saveabl_basil2.jpg",
+    "/images/photo_saveabl_bags.jpg",
+    "/images/photo_surf.jpg",
+    "/images/photo_vineyard.jpg",
+    "/images/photo_yoga.jpg",
+    "/images/photo_ski.jpg",
+    "/images/photo_lisbon.jpg",
+  ];
+  const [photoIndex, setPhotoIndex] = useState(0);
+
   return (
     <section
       id="projects"
@@ -265,14 +280,129 @@ const ProjectsSection: React.FC = () => {
                 </div>
 
                 {/* Divider */}
-                {index < projects.length - 1 && (
-                  <div className="block flex justify-center mt-12 mb-0">
-                    <div className="w-full border-t border-[#ebddd7]" />
-                  </div>
-                )}
-              </div>
+            <div className="block flex justify-center mt-12 mb-0">
+              <div className="w-full border-t border-[#ebddd7]" />
+            </div>
+          </div>
             );
           })}
+
+          {/* ---------------------------------------------
+               NYTT PROJEKT: Photography — ska vara REVERSED (index 5)
+             --------------------------------------------- */}
+          <div>
+            <div className="flex flex-col sm:flex-row-reverse items-center gap-10">
+              {/* TEXT */}
+              <div className="sm:w-1/2 w-full order-1 sm:order-none">
+                <h3 className={`${dmSerif.className} text-2xl sm:text-3xl mb-4`}>
+                  Photography
+                </h3>
+                <div className={`${poppins.className} text-base sm:text-lg`}>
+                  <p className="mb-4">
+                  A selection of photos captured in work and life: food, design and everyday moments that caught my attention.
+                  </p>
+                  <ul className="list-disc pl-5 space-y-4">
+                    <li>
+                      <strong>Focus:</strong> Authentic textures, natural light and warm color tones.
+                    </li>
+                    <li>
+                      <strong>Subjects:</strong> Food, product details, people and places.
+                    </li>
+                    <li>
+                      <strong>Use:</strong> Social media, newsletters and brand storytelling.
+                    </li>
+                  </ul>
+                  <p className="mt-4 italic opacity-80">
+                    Shot on iPhone and Panasonic Lumix GX9.
+                  </p>
+                </div>
+              </div>
+
+              {/* MEDIA: enkel bläddring */}
+              <div className="sm:w-1/2 w-full flex flex-col items-center sm:justify-center gap-4 order-2 sm:order-none">
+                <div className="relative w-full max-w-[420px]">
+                  <Image
+                    src={photoImages[photoIndex]}
+                    alt={`Photography ${photoIndex + 1}`}
+                    width={800}
+                    height={600}
+                    className="rounded-md shadow-md object-cover w-full h-auto"
+                  />
+                  <button
+                    aria-label="Previous photo"
+                    onClick={() =>
+                      setPhotoIndex((i) => (i - 1 + photoImages.length) % photoImages.length)
+                    }
+                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white px-2 py-1 rounded-full"
+                  >
+                    ‹
+                  </button>
+                  <button
+                    aria-label="Next photo"
+                    onClick={() =>
+                      setPhotoIndex((i) => (i + 1) % photoImages.length)
+                    }
+                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white px-2 py-1 rounded-full"
+                  >
+                    ›
+                  </button>
+                  <p className="mt-2 text-center text-sm opacity-80">
+                    {photoIndex + 1} / {photoImages.length}
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="block flex justify-center mt-12 mb-0">
+              <div className="w-full border-t border-[#ebddd7]" />
+            </div>
+          </div>
+
+          {/* ---------------------------------------------
+               NYTT PROJEKT: Saveabl Recipe Reel — ska vara NORMAL (index 6)
+             --------------------------------------------- */}
+          <div>
+            <div className="flex flex-col sm:flex-row items-center gap-10">
+              {/* TEXT */}
+              <div className="sm:w-1/2 w-full order-1 sm:order-none">
+                <h3 className={`${dmSerif.className} text-2xl sm:text-3xl mb-4`}>
+                  Saveabl Recipe Reel – 15 min
+                </h3>
+                <div className={`${poppins.className} text-base sm:text-lg`}>
+                  <p className="mb-4">
+                    Organic short-form video showing how our chef-prepped meal kit is finished in under 15 minutes.
+                  </p>
+                  <ul className="list-disc pl-5 space-y-4">
+                    <li>
+                      <strong>Concept & Production:</strong> Planned, filmed and edited for vertical mobile-first format.
+                    </li>
+                    <li>
+                      <strong>Tools:</strong> iPhone, CapCut/Premiere Pro.
+                    </li>
+                    <li>
+                      <strong>Outcome:</strong> Increased reach and saves through authentic, step-by-step storytelling.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* MEDIA */}
+              <div className="sm:w-1/2 w-full flex flex-col sm:flex-row items-center sm:justify-center gap-4 order-2 sm:order-none">
+                <video
+                  className="object-contain aspect-[9/16] max-w-[240px] sm:max-w-[280px] w-full sm:w-auto"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src="/videos/saveabl-recipe-vegobullar-9x16.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+          {/* ---- slut på nya block ---- */}
         </div>
       </div>
     </section>

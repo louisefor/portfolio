@@ -185,7 +185,7 @@ const RecommendationSection: React.FC = () => (
         <hr className="my-6 border-[#ebddd7]/30" />
         <address className="not-italic mt-6">
           <div className="font-semibold">Robert Nyberg</div>
-          <div className="italic opacity-90">Deputy CEO, New Customers</div>
+          <div className="italic opacity-90">Deputy CEO, new customers</div>
           <div className="mt-2 text-sm">
             <a className="underline hover:opacity-80" href="https://newcustomers.se/" target="_blank" rel="noopener">
               newcustomers.se
